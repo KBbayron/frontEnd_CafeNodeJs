@@ -15,7 +15,20 @@ import { AppHeaderComponent } from './layouts/full/header/header.component';
 import { AppSidebarComponent } from './layouts/full/sidebar/sidebar.component';
 import {HttpClientModule} from '@angular/common/http';
 import { SingupComponent } from './singup/singup.component';
+import {NgxLoaderModule, NgxUiLoaderConfig,SPINNER,PB_DIRECTION} from './ngx/ngx-loader';
 
+
+const ngxUiLoaderConfig: NgxUiLoaderConfig = {
+  text:"Loading...",
+  textColor:"#FFFFFF",
+  textPosition:"center-center",
+  pbColor:"red",
+  bgsColor:"red",
+  fgsColor:"red",
+  fgsType:SPINNER.ballSpinClockwise,
+  fgsSize:100,
+  pbDirection:PB_DIRECTION.leftTiRight
+}
 @NgModule({
   declarations: [	
     AppComponent,
